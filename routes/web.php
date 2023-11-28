@@ -10,6 +10,7 @@ use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlunoController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +21,10 @@ use App\Http\Controllers\AlunoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('search', [SiteController::class, 'search'])->name('search');
+Route::post('/contratar/{aluno}', [AlunoController::class, 'contratar'])->name('aluno.contratar');
 Route::middleware('locale')->group(function () {
-
+    
     Route::put('/locale', [LocaleController::class, 'setLocale'])->name('locale');
 
     Route::get('/', function () {
@@ -30,7 +32,7 @@ Route::middleware('locale')->group(function () {
     });
 
     Auth::routes();
-
+    
     Route::middleware('auth')->group(function () {
 
         //Rota para dashboard
@@ -44,13 +46,14 @@ Route::middleware('locale')->group(function () {
         Route::resource('curso', CursoController::class, ['except' => ['show']]);
         Route::resource('aluno', AlunoController::class);
 
-
         //Rotas para perfil do usuário
         Route::controller(ProfileController::class)->name('profile.')->group(function () {
             Route::get('profile', 'edit')->name('edit');
             Route::put('profile', 'update')->name('update');
             Route::put('profile/password', 'password')->name('password');
         });
+
+        
     });
 
     Route::get('/', [SiteController::class, 'index'])->name('site');

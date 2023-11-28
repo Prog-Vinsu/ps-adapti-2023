@@ -1,0 +1,390 @@
+body{
+  margin: 0;
+  background-color: #eff1f3;
+  font-family: Lato, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode{
+  background-color:#011F26;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Estilização Cabeçalho */
+#cabecalho{
+  background-color: #009FB7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px ;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.41);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.dark-mode #cabecalho{
+  background-color: #033A40;
+  color: #575a64;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .nav_element{
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização Imagem Cabeçalho */
+#cabecalho img{
+  height: 150px;
+}
+
+/* Estilzação Ancora Cabeçalho */
+#cabecalho a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização Lista Não Ordenada Cabeçalho */
+#cabecalho ul{
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+}
+
+/* Transição Ancora Cabeçalho */
+#cabecalho a:hover{
+  color: #c2f4ff;
+  transition: 0.25s;
+}
+
+.dark-mode #cabecalho h1{
+  color: #000000;
+}
+
+.dark-mode #cabecalho a:hover{
+  color: #628791;
+  transition: 0.25s;
+}
+
+#b_darkmode{
+  border: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px 50px 0px 140px;
+}
+
+.icon_darkmode {
+  background-color: #009FB7;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  background-image: url('../../img/Lua_Gabi.png'); /* Substitua 'icone.png' pelo caminho real do seu arquivo PNG */
+  background-size: 21px ; /* Ajuste o tamanho conforme necessário */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .icon_darkmode{
+  background-color:#033A40;
+  background-image: url('../../img/sun-4-48.png'); /* Substitua 'icone.png' pelo caminho real do seu arquivo PNG */
+  background-size: 25px ; /* Ajuste o tamanho conforme necessário */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+/* Estilização Principal */
+#principal{
+  background-color: #DAD7DD;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.41);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode #principal{
+  background-color: #666666;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#btnTopo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  border: none;
+  margin: auto;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #cdcecf;
+}
+
+#icon_topo{
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  background-image: url(../../img/subir.png);
+  background-size: 40px ; /* Ajuste o tamanho conforme necessário */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Estilização Barra de Pesquisa */
+#pesquisa{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilização barra de pesquisa */
+.pesquisa_curso{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  border: none;
+  overflow: hidden;
+}
+
+/* Estilização Campo de entrada de texto */
+.imput_curso{
+  flex: 1;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .imput_curso{
+  background-color: #393b3f;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode ::placeholder{
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Estilização Botão de Pesquisa */
+.b_pesquisar{
+  background-color: #575a64;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* Transição Botão de Pesquisa */
+.b_pesquisar:hover{
+  color: #d3d3d3;
+  background-color: #202020;
+  transition: 0.25s;
+}
+
+/* Estilização Container Alunos */
+#container_alunos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 25px;
+}
+
+/* Estilização Cards Alunos */
+.aluno{
+  background-color: #7b808a;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 250px;
+  border-radius: 0rem;
+  padding: 25px;
+
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.41);
+
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.dark-mode .aluno{
+  background-color: #393b3f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização Imagem Aluno */
+.aluno img{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+#resposta_aluno{
+  color: #324146;
+}
+
+#aluno{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dark-mode #resposta_aluno{
+  color: #7a7a7a;
+}
+
+.form{
+  background-color: #484a52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+/* Estilização Botão Contratar */
+.b_contratar{
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.b_contratado{
+  background-color: #033A40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2px 6px;
+}
+
+/* Transição Botão Contratar */
+.form:hover{
+  color: #d3d3d3;
+  background-color: #202020;
+  transition: 0.25s;
+}
+
+
+/* Estilização Lista Não Ordenada Alunos */
+#aluno ul{
+  list-style-type: none;
+  padding: 0px;
+}
+
+/* Estilização Container Rodpé */
+.rodape_container {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.41);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização Itens Rodapé */
+.rodape-item{
+  display: inline-block;
+  margin: 0 30px; 
+  font-size: 18px;
+  text-align: left;
+  max-width: 400px; 
+}
+
+/* Estilização Titulo H3 Rodapé */
+.rodape-item h3{
+  color: #2b75a7; 
+  margin-bottom: 15px; 
+}
+
+/* Estilização Paragrafo Rodapé */
+.rodape-item p{
+  line-height: 1.5; 
+}
+
+.dark-mode .rodape_container{
+  background-color: #202020;
+  color: #ecf0f1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media(max-width:900px){
+  .nav_element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media(max-width:900px){
+  #cabecalho,
+  #cabecalho ul{
+    flex-direction: column;
+    padding: 0;
+  }
+  #b_darkmode{
+    margin: 0;
+  }
+}
+
+@media(max-width:480px){
+  #pesquisa{
+    flex-direction: column;
+  }
+}
+
+@media(max-width:500px){
+  .rodape_container{
+    flex-direction: column;
+  }
+}
+
+@media(max-width:900px){
+  #principal{
+    margin: auto;
+  }
+}

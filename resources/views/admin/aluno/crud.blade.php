@@ -37,7 +37,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                @component('admin.aluno.formulario', ['aluno' => isset($aluno) ?? null,
+                                @component('admin.aluno.formulario', ['aluno' => $aluno ?? null,
                                     'cursos' => $cursos])
                                 @endcomponent
                             </div>

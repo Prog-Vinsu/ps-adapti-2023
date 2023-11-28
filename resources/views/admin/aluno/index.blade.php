@@ -30,34 +30,34 @@
                                         </th>
                                     </thead>
                                     <tbody>
-{{--                                        @foreach ($alunos as $produto)--}}
-{{--                                            <tr>--}}
-{{--                                                <td>{{ $aluno->id }}</td>--}}
-{{--                                                <td>{{ $aluno->nome }}</td>--}}
-{{--                                                <td>--}}
-{{--                                                    <!-- botao editar -->--}}
-{{--                                                    <a href="{{ route('aluno.edit', $aluno->id) }}">--}}
-{{--                                                        <button type="button" title="{{ __('Edit') }}"--}}
-{{--                                                            class="btn btn-warning">--}}
-{{--                                                            <i class="material-icons" style="color: white">edit</i>--}}
-{{--                                                        </button>--}}
-{{--                                                    </a>--}}
-{{--                                                    <!-- Botao apagar -->--}}
-{{--                                                    <button type="button" title="{{ __('Delete') }}" data-toggle="modal"--}}
-{{--                                                        data-target="#modal-excluir" data-id="{{ $aluno->id }}"--}}
-{{--                                                        class="btn btn-danger">--}}
-{{--                                                        <i class="material-icons">close</i>--}}
-{{--                                                    </button>--}}
-{{--                                                    <!-- Botao visualizar -->--}}
-{{--                                                    <button type="button" title="{{ __('Visualizar') }}"--}}
-{{--                                                        data-toggle="modal" data-target="#modal-detalhes"--}}
-{{--                                                        data-id="{{ $aluno->id }}" class="btn btn-danger">--}}
-{{--                                                        <i class="material-icons">visibility</i>--}}
-{{--                                                    </button>--}}
+                                        @foreach ($alunos as $aluno)
+                                            <tr>
+                                                <td>{{ $aluno->id }}</td>
+                                                <td>{{ $aluno->nome }}</td>
+                                                <td>
+                                                    <!-- botao editar -->
+                                                    <a href="{{ route('aluno.edit', $aluno->id) }}">
+                                                        <button type="button" title="{{ __('Edit') }}"
+                                                            class="btn btn-warning">
+                                                            <i class="material-icons" style="color: white">edit</i>
+                                                        </button>
+                                                    </a>
+                                                    <!-- Botao apagar -->
+                                                    <button type="button" title="{{ __('Delete') }}" data-toggle="modal"
+                                                        data-target="#modal-excluir" data-id="{{ $aluno->id }}"
+                                                        class="btn btn-danger">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                    <!-- Botao visualizar -->
+                                                    <button type="button" title="{{ __('Visualizar') }}"
+                                                        data-toggle="modal" data-target="#modal-detalhes"
+                                                        data-id="{{ $aluno->id }}" class="btn btn-danger">
+                                                        <i class="material-icons">visibility</i>
+                                                    </button>
 
-{{--                                                </td>--}}
-{{--                                            </tr>--}}
-{{--                                        @endforeach--}}
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -159,8 +159,8 @@
                 $("#detalhes-nome").val(resposta.nome);
                 $("#detalhes-contratado").val(resposta.contratado);
                 $("#detalhes-descricao").val(resposta.descricao);
-                $("#detalhes-curso").val(resposta.curso);
-                $("#detalhes-imagem").attr('src', '/storage/' + resposta.imagem);
+                $("#detalhes-curso").val(resposta.curso.curso);
+                $("#detalhes-imagem").attr('src', '' + resposta.imagem);
             });
         })
         /* js para abrir Modal de excluir de forma dinâmica */

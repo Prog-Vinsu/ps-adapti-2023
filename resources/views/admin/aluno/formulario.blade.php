@@ -34,8 +34,7 @@
 <div class="row">
     <label class="col-sm-2 col-form-label">{{ __('Está contratado?') }}</label>
     <div>
-        <input type="checkbox" id="estáFormado" name="contratado" value="1" data-expected-info="contratado"
-            class="form-control @error('contratado') is-invalid @enderror" required>
+    <input type="checkbox" id="contratado" name="contratado" value="1" class="form-control @error('contratado') is-invalid @enderror" @if(isset($aluno) && $aluno->contratado) checked @endif>
         @error('contratado')
             <span class="invalid-feedback" role="alert">
                 <i class="fi-circle-cross"></i><strong> {{ $message }}</strong>
